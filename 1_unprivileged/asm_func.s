@@ -28,7 +28,7 @@ start_user:
 	mov r3, #0b11	//bit 1 and bit 0 are SPSEL and nPRIV bit.
 	msr control, r3	//Because control register must pass value by register for operator filed bit.
 	isb	//To ensure instruction fetch is corrtctness, isb instruction is needed to plug in after privileged or unprivileged operator.
-	bx r0 //Jump to user_task function
+	bx lr //Jump to user_task function
 
 .global	sw_priv
 sw_priv:
