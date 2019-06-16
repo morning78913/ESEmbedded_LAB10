@@ -30,7 +30,7 @@ int main(void)
 
 	//start user task
 	//??????
-	start_user( (uint32_t *)user_task , (uint32_t *)psp_init );
+	start_user( (uint32_t *)user_task , psp_init );
 
 	while (1) //should not go here
 		;
